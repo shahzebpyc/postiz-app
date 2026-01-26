@@ -40,7 +40,7 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/postiz.svg" type="image/svg+xml" />
       </head>
       <body
         className={clsx(jakartaSans.className, 'dark text-primary !bg-primary')}
@@ -73,9 +73,9 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
           transloadit={
             process.env.TRANSLOADIT_AUTH && process.env.TRANSLOADIT_TEMPLATE
               ? [
-                  process.env.TRANSLOADIT_AUTH!,
-                  process.env.TRANSLOADIT_TEMPLATE!,
-                ]
+                process.env.TRANSLOADIT_AUTH!,
+                process.env.TRANSLOADIT_TEMPLATE!,
+              ]
               : []
           }
         >
