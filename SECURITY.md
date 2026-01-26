@@ -16,7 +16,7 @@ When reporting a security vulnerability, please provide as much detail as possib
 - A clear description of the vulnerability
 - Steps to reproduce the vulnerability
 - Any relevant code or configuration files
-
+ 
 ## Supported Versions
 
 This project currently only supports the latest release. We recommend that users always use the latest version of the Postiz app to ensure they have the latest security patches.
