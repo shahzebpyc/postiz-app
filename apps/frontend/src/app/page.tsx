@@ -27,13 +27,15 @@ export default function LandingPage() {
             <main className="flex-1 flex flex-col justify-center items-center text-center px-4">
                 <div className="max-w-4xl mx-auto space-y-8">
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                        Over <span className="text-[#FC69FF]">100+</span> Entrepreneurs use
+                        The Ultimate Social Media
                         <br />
-                        <span className="block mt-2">Vinsmoke Media</span>
+                        <span className="text-[#FC69FF]">Scheduling Tool</span>
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto">
-                        To Grow Their Social Presence
+                    <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
+                        Vinsmoke Media helps you schedule posts, analyze performance, and manage all your social media accounts from a single dashboard. Features include unified analytics, team collaboration, multi-platform publishing, and AI-powered content suggestions.
+                        <br />
+                        Open Source, Privacy-Focused, and Developer Friendly.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
@@ -52,9 +54,9 @@ export default function LandingPage() {
                     &copy; {new Date().getFullYear()} Vinsmoke Media. All rights reserved.
                 </div>
                 <div className="flex gap-4 justify-center">
-                    <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                    <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-                    <Link href="/deletion-instructions" className="hover:text-white transition-colors">Data Deletion Instructions</Link>
+                    <Link href="/privacy/" className="hover:text-white transition-colors">Privacy Policy</Link>
+                    <Link href="/terms/" className="hover:text-white transition-colors">Terms of Service</Link>
+                    <Link href="/deletion-instructions/" className="hover:text-white transition-colors">Data Deletion Instructions</Link>
                 </div>
             </footer>
         </div>

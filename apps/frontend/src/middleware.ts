@@ -69,6 +69,15 @@ export async function middleware(request: NextRequest) {
     return response;
   }
 
+  if (
+    nextUrl.pathname === '/' ||
+    nextUrl.pathname === '/privacy' ||
+    nextUrl.pathname === '/terms' ||
+    nextUrl.pathname === '/deletion-instructions'
+  ) {
+    return topResponse;
+  }
+
   const org = nextUrl.searchParams.get('org');
   const url = new URL(nextUrl).search;
   if (nextUrl.href.indexOf('/auth') === -1 && !authCookie) {

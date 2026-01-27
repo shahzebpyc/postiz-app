@@ -18,7 +18,7 @@ export default function DeletionInstructions() {
                             Look for <strong>"Apps and Websites"</strong> and you will see all of the apps and websites you linked with your Facebook.
                         </li>
                         <li>
-                            Search and Click <strong>"Postiz"</strong> (or the App Name) in the search bar.
+                            Search and Click <strong>"Vinsmoke Media"</strong> (or the App Name) in the search bar.
                         </li>
                         <li>
                             Scroll and click <strong>"Remove"</strong>.
