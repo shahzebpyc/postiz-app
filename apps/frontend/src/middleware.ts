@@ -18,6 +18,13 @@ export async function middleware(request: NextRequest) {
     request.cookies.get('auth') ||
     request.headers.get('auth') ||
     nextUrl.searchParams.get('loggedAuth');
+
+  console.log('--- MIDDLEWARE DEBUG ---');
+  console.log('URL:', nextUrl.href);
+  console.log('AuthCookie Present:', !!authCookie);
+  console.log('AuthCookie Value:', request.cookies.get('auth')?.value);
+  console.log('Orignal AuthCookie Object:', request.cookies.get('auth'));
+
   const lng = request.cookies.has(cookieName)
     ? acceptLanguage.get(request.cookies.get(cookieName).value)
     : acceptLanguage.get(

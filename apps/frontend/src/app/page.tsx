@@ -54,6 +54,7 @@ export default function LandingPage() {
                 <div className="flex gap-4 justify-center">
                     <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
                     <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+                    <Link href="/deletion-instructions" className="hover:text-white transition-colors">Data Deletion Instructions</Link>
                 </div>
             </footer>
         </div>
