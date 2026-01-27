@@ -70,7 +70,7 @@
 ## 🔌 See the leading Postiz features
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=BdsCVvEYgHU" target="_blank">
+  <a href="https://www.youtube.com/watch?v=BdsCVvEYgHU" target="_blan k">
     <img alt="Postiz" src="https://github.com/user-attachments/assets/8b9b7939-da1a-4be5-95be-42c6fce772de" />
   </a>
 </p>
