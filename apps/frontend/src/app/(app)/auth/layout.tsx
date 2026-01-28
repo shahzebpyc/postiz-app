@@ -31,6 +31,7 @@ export default async function AuthLayout({
           <br />
           Vinsmoke Media To Grow Their Social Presence
         </div>
+        <Image src="/logo.png" width={400} height={400} alt="Vinsmoke Media Logo" className="mt-10 object-contain" />
       </div>
     </div>
   );

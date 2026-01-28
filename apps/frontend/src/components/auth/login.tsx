@@ -3,6 +3,7 @@
 import { useForm, SubmitHandler, FormProvider } from 'react-hook-form';
 import { useFetch } from '@gitroom/helpers/utils/custom.fetch';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@gitroom/react/form/button';
 import { Input } from '@gitroom/react/form/input';
 import { useMemo, useState } from 'react';
@@ -65,8 +66,9 @@ export function Login() {
       <form className="flex-1 flex" onSubmit={form.handleSubmit(onSubmit)}>
         <div className="flex flex-col flex-1">
           <div>
-            <h1 className="text-[40px] font-[500] -tracking-[0.8px] text-start cursor-pointer">
+            <h1 className="text-[40px] font-[500] -tracking-[0.8px] text-start cursor-pointer flex items-center gap-3">
               {t('sign_in', 'Sign In')}
+              <Image src="/logo.svg" width={40} height={40} alt="Logo" />
             </h1>
           </div>
           <div className="text-[14px] mt-[32px] mb-[12px]">

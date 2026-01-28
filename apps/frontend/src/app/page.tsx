@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@gitroom/react/form/button';
 
 export default function LandingPage() {
@@ -26,6 +27,7 @@ export default function LandingPage() {
             {/* Hero Section */}
             <main className="flex-1 flex flex-col justify-center items-center text-center px-4">
                 <div className="max-w-4xl mx-auto space-y-8">
+                    <Image src="/logo.png" width={150} height={150} alt="Vinsmoke Media Logo" className="mx-auto mb-4" />
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
                         The Ultimate Social Media
                         <br />
