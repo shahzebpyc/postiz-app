@@ -70,12 +70,16 @@ export async function middleware(request: NextRequest) {
   }
 
   if (
-    nextUrl.pathname === '/' ||
+    (nextUrl.pathname === '/' && !authCookie) ||
     nextUrl.pathname === '/privacy' ||
     nextUrl.pathname === '/terms' ||
     nextUrl.pathname === '/deletion-instructions'
   ) {
     return topResponse;
+  }
+
+  if (nextUrl.pathname === '/' && authCookie) {
+    return NextResponse.redirect(new URL('/launches', nextUrl.href));
   }
 
   const org = nextUrl.searchParams.get('org');
@@ -99,11 +103,11 @@ export async function middleware(request: NextRequest) {
 
   // If the url is /auth and the cookie exists, redirect to /
   if (nextUrl.href.indexOf('/auth') > -1 && authCookie) {
-    return NextResponse.redirect(new URL(`/${url}`, nextUrl.href));
+    return NextResponse.redirect(new URL(`/launches${url}`, nextUrl.href));
   }
   if (nextUrl.href.indexOf('/auth') > -1 && !authCookie) {
     if (org) {
-      const redirect = NextResponse.redirect(new URL(`/`, nextUrl.href));
+      const redirect = NextResponse.redirect(new URL(`/launches`, nextUrl.href));
       redirect.cookies.set('org', org, {
         ...(!process.env.NOT_SECURED
           ? {
@@ -131,7 +135,7 @@ export async function middleware(request: NextRequest) {
         })
       ).json();
       const redirect = NextResponse.redirect(
-        new URL(`/?added=true`, nextUrl.href)
+        new URL(`/launches?added=true`, nextUrl.href)
       );
       if (id) {
         redirect.cookies.set('showorg', id, {
